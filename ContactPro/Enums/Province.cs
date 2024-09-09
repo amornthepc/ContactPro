@@ -2,7 +2,7 @@
 {
     public enum Province
     {
-        UNK, // Unknown,
+        //UNK, // Unknown,
         BKK, // Bangkok,
         SPK, // SamutPrakan,
         NBI, // Nonthaburi,
@@ -79,6 +79,6 @@
         PTN, // Pattani,
         YLA, // Yala,
         NWT, // Narathiwat,
-        BKN, // BuengKan
+        BKN // BuengKan
     }
 }
