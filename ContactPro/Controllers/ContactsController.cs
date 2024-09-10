@@ -160,26 +160,6 @@ namespace ContactPro.Controllers
             return View(nameof(Index), contacts);
         }
 
-        // GET: Contacts/Details/5
-        [Authorize]
-        public async Task<IActionResult> Details(int? id)
-        {
-            if (id == null || _context.Contacts == null)
-            {
-                return NotFound();
-            }
-
-            var contact = await _context.Contacts
-                .Include(c => c.AppUser)
-                .FirstOrDefaultAsync(m => m.Id == id);
-            if (contact == null)
-            {
-                return NotFound();
-            }
-
-            return View(contact);
-        }
-
         // GET: Contacts/Create
         [Authorize]
         public async Task<IActionResult> Create()
